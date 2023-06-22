@@ -1,0 +1,29 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  },
+  "cSpell.words": [
+    "Categoryid",
+    "Eventid",
+    "formik",
+    "Formik",
+    "Hagámoslo",
+    "hamburguer",
+    "ladygaga",
+    "minilogo",
+    "mypublications",
+    "myvote",
+    "myvotes",
+    "Querétaro",
+    "recents",
+    "Routepublications",
+    "Standar",
+    "Swal",
+    "swiper",
+    "votefor",
+    "Votefor"
+  ]
+}
