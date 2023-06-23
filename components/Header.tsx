@@ -9,6 +9,7 @@ import { RiLayoutMasonryFill } from 'react-icons/ri';
 import { SlArrowDown } from 'react-icons/sl';
 import { logOut } from '../lib/helpers/logout.helper';
 import { useUser } from '../lib/services/user.services';
+import minilogo from '../public/images/hashlogo2.svg';
 
 const Header = () => {
   const { data: user } = useUser();
@@ -38,12 +39,12 @@ const Header = () => {
   // }, []);
 
   return (
-    <div className="bg-primary-black header-container">
-      <div className="flex flex-row w-screen items-center">
-        <div className="flex place-content-between items-center w-screen mr-[20px] ml-[20px] sm:mr-[52px] sm:ml-[46px]">
-          <div className="sm:w-[62px] sm:h-[30px] w-[50px] h-[30px] relative">
+    <div className="bg-[#a133bd] z-50 header-container fixed">
+      <div className="flex flex-row w-screen items-center shadow-lg h-[100%]">
+        <div className="flex place-content-between items-center relative w-screen mr-[20px] ml-[20px] sm:mr-[52px] sm:ml-[46px]">
+          <div className="sm:w-[62px] sm:h-[30px] w-[40px] h-[40px]">
             <Link href="/">
-              <Image src="/images/minilogo.svg" layout="fill" alt="imageLogo" />
+              <Image src={minilogo} alt="imageLogo" className='absolute -top-1 shadow-filter' width={40} />
             </Link>
           </div>
           {/*LOG CAMBIO*/}
@@ -60,12 +61,12 @@ const Header = () => {
                 Crear publicación
               </div>
             </Link>
-            <div className="flex sm:gap-[18px] gap-[12px]">
+            <div className="flex sm:gap-[18px] text-[14px] gap-[12px]">
               <Link href="/login" className="cursor-pointer">
-                Log In
+                <div className='shadow-text'>Log In</div>
               </Link>
               <Link href="/sign-up" className="cursor-pointer">
-                Sign In
+                <div className='shadow-text'>Sign In</div>
               </Link>
             </div>
           </nav>

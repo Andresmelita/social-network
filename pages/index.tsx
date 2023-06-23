@@ -1,8 +1,8 @@
 import type { ReactElement } from 'react';
-import Layout from '../components/layout/Layout';
 import NestedLayout from '../components/NestedLayout';
-import Home from './home';
+import Layout from '../components/layout/Layout';
 import type { NextPageWithLayout } from './_app';
+import Home from './home';
 
 const Page: NextPageWithLayout = () => {
   return <Home />;
@@ -10,7 +10,7 @@ const Page: NextPageWithLayout = () => {
 
 Page.getLayout = function getLayout(page: ReactElement) {
   return (
-    <Layout title="Home | Para Cuando?" description="Home">
+    <Layout title="Home | HashNet" description="Home">
       <NestedLayout>{page}</NestedLayout>
     </Layout>
   );
