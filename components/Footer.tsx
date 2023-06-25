@@ -1,12 +1,9 @@
-import InputSearch from './InputSearch';
 
 const Footer = () => {
   return (
-    <footer className="bottom-0 left-0 flex flex-col items-center justify-center bg-center bg-cover min-h-[488px] max-h-[488px] w-[100vw] bg-[url('/images/footerImage.png')] relative">
-      <div className="w-[100%] flex justify-center items-center absolute p-[26px]">
-        <InputSearch />
-      </div>
-    </footer>
+    <div className="min-h-[60px] max-h-[60px] w-[100vw] bg-[url('/images/back01.jpg')] absolute bottom-0 shadowbox-filter bg-center bg-cover flex justify-center items-center">
+      <p className="shadow-text">© 2023 - Andrés Salazar Melita 🍀</p>
+    </div>
   );
 };
 

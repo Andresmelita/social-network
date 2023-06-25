@@ -1,7 +1,9 @@
+import Cookies from 'js-cookie';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { BsCircle, BsHeart } from 'react-icons/bs';
+import { CgProfile } from 'react-icons/cg';
 import { FaPowerOff } from 'react-icons/fa';
 import { IoAddSharp } from 'react-icons/io5';
 import { MdOutlinePersonOutline } from 'react-icons/md';
@@ -10,6 +12,7 @@ import { SlArrowDown } from 'react-icons/sl';
 import { logOut } from '../lib/helpers/logout.helper';
 import { useUser } from '../lib/services/user.services';
 import minilogo from '../public/images/hashlogo2.svg';
+import InputSearch from './InputSearch';
 
 const Header = () => {
   const { data: user } = useUser();
@@ -30,21 +33,21 @@ const Header = () => {
     }
   }, [user]);
 
-  // useEffect(() => {
-  //   const jwt = Cookies.get('token');
-  //   if (!jwt) {
-  //     return setLoginUser(true);
-  //   }
-  //   return setLoginUser(false);
-  // }, []);
+  useEffect(() => {
+    const jwt = Cookies.get('token');
+    if (!jwt) {
+      return setLoginUser(true);
+    }
+    return setLoginUser(false);
+  }, []);
 
   return (
-    <div className="bg-[#a133bd] z-50 header-container fixed">
-      <div className="flex flex-row w-screen items-center shadow-lg h-[100%]">
+    <div className="bg-[#3f2e91] z-[100] header-container fixed justify-center">
+      <div className="flex flex-row w-screen items-center h-[100%] max-w-[1100px]">
         <div className="flex place-content-between items-center relative w-screen mr-[20px] ml-[20px] sm:mr-[52px] sm:ml-[46px]">
-          <div className="sm:w-[62px] sm:h-[30px] w-[40px] h-[40px]">
+          <div className="sm:w-[62px] sm:h-[30px] w-[40px] h-max flex items-center">
             <Link href="/">
-              <Image src={minilogo} alt="imageLogo" className='absolute -top-1 shadow-filter' width={40} />
+              <Image src={minilogo} alt="imageLogo" className='absolute top-[4px] shadow-filter' width={40} />
             </Link>
           </div>
           {/*LOG CAMBIO*/}
@@ -55,19 +58,21 @@ const Header = () => {
                 : 'hidden'
             }
           >
-            <Link href="/create" className="flex">
+            {/* <Link href="/create" className="flex">
               <div className="flex items-center text-primary-blue">
                 <IoAddSharp className=" justify-content flex m-1 text-[26px]" />
                 Crear publicación
               </div>
-            </Link>
-            <div className="flex sm:gap-[18px] text-[14px] gap-[12px]">
+            </Link> */}
+            <div className="flex sm:gap-[18px] text-[14px] gap-[10px] h-[50px] items-center">
               <Link href="/login" className="cursor-pointer">
-                <div className='shadow-text'>Log In</div>
+                <div className='shadow-text hidden sm:flex'>Create my Hash!</div>
               </Link>
-              <Link href="/sign-up" className="cursor-pointer">
+              <CgProfile className='text-[24px] shadow-text' />
+              {/* <p className="shadow-text">{'|'}</p> */}
+              {/* <Link href="/sign-up" className="cursor-pointer">
                 <div className='shadow-text'>Sign In</div>
-              </Link>
+              </Link> */}
             </div>
           </nav>
           {/*LOG CAMBIO*/}
@@ -78,12 +83,15 @@ const Header = () => {
                 : 'text-white flex sm:gap-[49px] cursor:pointer gap-[12px] h500-normal-12px items-center'
             }
           >
-            <Link href="/create" className="md:flex hidden">
+            {/* <Link href="/create" className="md:flex hidden">
               <div className="flex items-center text-primary-blue">
                 <IoAddSharp className=" justify-content flex m-1 text-[26px]" />
                 Crear publicación
               </div>
-            </Link>
+            </Link> */}
+            <div className="flex pl-[10px] pr-[10px] w-[280px] justify-center items-center">
+              <InputSearch />
+            </div>
             <div className="flex sm:gap-[42px] gap-[12px] justify-center items-center">
               <Link href="/profile" className="gap-[8px] md:flex hidden">
                 <BsHeart className="text-primary-pink text-[16px]" />
