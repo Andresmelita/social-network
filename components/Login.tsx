@@ -62,8 +62,6 @@ const Login = () => {
 
     return (
         <div className="login__page flex items-center">
-            <title>Login | Para Cuando?</title>
-            {/* <meta name="description" content="Página para crear un evento"></meta> */}
             <div className="login__card flex flex-col md:flex-row xs:m-auto md:m-0 w-screen">
                 {/* <div className="login__image hidden bg-[url('/images/login_img.jpg')] bg-cover bg-center md:block w-1/2 h-screen overflow-hidden relative">
                     <div className="letters__container flex justify-center align-center w-[100%] h-[100%] ">
@@ -84,7 +82,7 @@ const Login = () => {
                 <div className="login__body flex flex-col xs:m-auto xs:w-[80%] md:w-1/2 md:p-10 p-4 md:h-max overflow-hidden justify-center">
                     <div className="login__body md:w-3/4 lg:w-4/5 md:m-auto md:mt-0 md:mb-0">
                         <div className="login__form flex flex-col gap-3">
-                            <div className="vh-100 flex flex-column justify-center align-items-center">
+                            <div className="vh-100 flex flex-column justify-center align-items-center py-[10px]">
                                 <form className="w-[500px]" onSubmit={formik.handleSubmit}>
                                     <h1 className='text-[30px] font-bold text-center pb-[10px] shadow-text welcome'>Welcome !</h1>
                                     <div className="form__email flex flex-col gap-2 pb-[8px]">
@@ -145,7 +143,7 @@ const Login = () => {
                                     <div className="form__button" onClick={log}>
                                         <button
                                             type="submit"
-                                            className="hover:scale-110 ease-in-out duration-300  shadow-text w-full p-4 mt-5 bg-[url('/images/back01.jpg')] bg-cover rounded-full text-[#fff] l600-normal-16px"
+                                            className="hover:scale-110 ease-in-out duration-300  shadow-text w-full p-4 mt-[8px] bg-[url('/images/back01.jpg')] bg-cover rounded-full text-[#fff] l600-normal-16px"
                                         ><p className='shadow-text text-[20px]'>Log in</p>
                                         </button>
                                     </div>

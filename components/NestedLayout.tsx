@@ -9,10 +9,12 @@ interface Props {
 
 const NestedLayout = ({ children }: Props) => {
   return (
-    <div>
+    <div className='bg-[100vh]'>
       <Header />
       {children}
-      <Footer />
+      <div className="absolute bottom-0">
+        <Footer />
+      </div>
     </div>
   );
 };

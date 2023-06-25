@@ -9,7 +9,7 @@ interface Props {
 
 export default function Layout({ children, title, description }: Props) {
   return (
-    <div className="Application container-layout">
+    <div className="Application container-layout h-[100%]">
       <title>{title}</title>
       <meta name="description" content={description}></meta>
       {children}

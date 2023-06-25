@@ -72,7 +72,7 @@ const Home = () => {
           </svg> */}
         </div>
         <div className='flex flex-col justify-center items-center w-[100vw] pl-[21px]'></div>
-        <div className={isLogin ? "h-max shadowbox-filter py-[10px]" : "h-[660px] justify-center items-center flex"}>
+        <div className={isLogin ? "h-full" : "h-full"}>
           {isLogin ? <Login /> : <div></div>}
         </div>
         {/* <div className="flex flex-col justify-center items-center w-[100vw] pl-[21px]">
