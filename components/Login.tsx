@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { MdEmail } from 'react-icons/md';
+import { RiLock2Fill } from 'react-icons/ri';
 import Swal from 'sweetalert2';
 import * as yup from 'yup';
 import { login } from '../lib/services/auth.services';
@@ -94,7 +95,7 @@ const Login = () => {
                                         </label>
                                         <div className="border-2 rounded-full text-[#1D1C3F] bg-[#E8F0FE] border-[#3f2e91] flex ">
                                             <div className="flex justify-center items-center w-[60px]">
-                                                <MdEmail className="text-[24px]" />
+                                                <MdEmail className="text-[22px]" />
                                             </div>
                                             <input
                                                 className="bg-[#E8F0FE] rounded-full l400-normal-16px p-3.5 w-full"
@@ -122,7 +123,7 @@ const Login = () => {
                                         </label>
                                         <div className="border-2 rounded-full text-[#1D1C3F] bg-[#E8F0FE] border-[#3f2e91] flex">
                                             <div className="flex justify-center items-center w-[60px]">
-                                                <MdEmail className="text-[24px]" />
+                                                <RiLock2Fill className="text-[22px]" />
                                             </div>
                                             <input
                                                 className="bg-[#E8F0FE] l400-normal-16px border-none p-3.5 rounded-full w-[100%] text-[#1D1C3F] default"
