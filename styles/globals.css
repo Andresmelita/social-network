@@ -191,8 +191,10 @@
     fill: #ffffff;
   }
 
-  input:default {
-    background-color: #ffffff;
+  input {
+    all: unset;
+    all: initial;
+    background: inherit;
   }
 
   .container-layout {

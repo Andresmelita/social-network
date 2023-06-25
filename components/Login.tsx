@@ -92,12 +92,12 @@ const Login = () => {
                                             htmlFor="email"
                                         >
                                         </label>
-                                        <div className="border-2 bg-white rounded-full text-[#1D1C3F] border-[#3f2e91] flex ">
+                                        <div className="border-2 rounded-full text-[#1D1C3F] bg-[#E8F0FE] border-[#3f2e91] flex ">
                                             <div className="flex justify-center items-center w-[60px]">
                                                 <MdEmail className="text-[24px]" />
                                             </div>
                                             <input
-                                                className="bg-white rounded-full l400-normal-16px p-3.5 w-full"
+                                                className="bg-[#E8F0FE] rounded-full l400-normal-16px p-3.5 w-full"
                                                 name="email"
                                                 type="email"
                                                 placeholder="Enter your email"
@@ -120,12 +120,12 @@ const Login = () => {
                                             htmlFor="Enter your Password"
                                         >
                                         </label>
-                                        <div className="border-2 bg-white rounded-full text-[#1D1C3F] border-[#3f2e91] flex">
+                                        <div className="border-2 rounded-full text-[#1D1C3F] bg-[#E8F0FE] border-[#3f2e91] flex">
                                             <div className="flex justify-center items-center w-[60px]">
                                                 <MdEmail className="text-[24px]" />
                                             </div>
                                             <input
-                                                className="l400-normal-16px p-3.5 rounded-full w-[100%] text-[#1D1C3F] default"
+                                                className="bg-[#E8F0FE] l400-normal-16px border-none p-3.5 rounded-full w-[100%] text-[#1D1C3F] default"
                                                 name="password"
                                                 type="password"
                                                 placeholder="***********"
